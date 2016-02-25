@@ -8,7 +8,8 @@
   "bugs": "https://github.com/doowb/request-info/issues",
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "main": "index.js",
   "engines": {
@@ -18,9 +19,12 @@
     "test": "mocha"
   },
   "devDependencies": {
+    "express": "^4.13.4",
     "gulp-format-md": "^0.1.7",
     "mocha": "*",
-    "should": "*"
+    "node-mocks-http": "^1.5.1",
+    "should": "*",
+    "supertest": "^1.2.0"
   },
   "keywords": [],
   "verb": {
@@ -36,5 +40,9 @@
         "express"
       ]
     }
+  },
+  "dependencies": {
+    "lazy-cache": "^1.0.3",
+    "ua-parser-js": "^0.7.10"
   }
 }
