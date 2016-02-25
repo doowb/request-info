@@ -22,8 +22,6 @@
     "express": "^4.13.4",
     "gulp-format-md": "^0.1.7",
     "mocha": "*",
-    "node-mocks-http": "^1.5.1",
-    "should": "*",
     "supertest": "^1.2.0"
   },
   "keywords": [],

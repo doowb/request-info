@@ -7,6 +7,7 @@
 
 'use strict';
 
+require('mocha');
 var request = require('supertest');
 var express = require('express');
 var assert = require('assert');
