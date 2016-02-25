@@ -10,6 +10,23 @@ Install with [npm](https://www.npmjs.com/):
 $ npm i request-info --save
 ```
 
+## API
+
+### [info](index.js#L23)
+
+Get information information about the given http request. Some of the adapted from https://github.com/joola/joola.io.express/blob/master/index.js#L39-L50
+
+**Params**
+
+* `req` **{Object}**: http request object (from http or express)
+* `returns` **{Object}**: info object containing `httpVersion`, `ip`, `method`, `referer`, `url`, and `ua` (useragent information)
+
+**Example**
+
+```js
+
+```
+
 ## Related projects
 
 [express](https://www.npmjs.com/package/express): Fast, unopinionated, minimalist web framework | [homepage](https://github.com/expressjs/express)
