@@ -25,7 +25,7 @@ module.exports = function info(req) {
     httpVersion: req.httpVersionMajor + '.' + req.httpVersionMinor,
     ip: utils.ip(req, '127.0.0.1'),
     method: req.method,
-    referer: req.header('referer') || '<undefined>',
+    referer: utils.header(req, 'referer', '<undefined>'),
     url: req.url || '<undefined>',
     ua: utils.ua(req),
   };

@@ -49,7 +49,7 @@ require = fn;
 
 utils.ua = function(req) {
   var ua = new utils.uaParser();
-  ua.setUA(req.header('user-agent'));
+  ua.setUA(utils.header(req, 'user-agent'));
   return ua.getResult();
 };
 
@@ -67,6 +67,27 @@ utils.ip = function(req, def) {
     (req.socket && req.socket.remoteAddress) ||
     (req.socket && req.socket.socket && req.socket.socket.remoteAddresss) ||
     def;
+};
+
+/**
+ * Get the header from either the `header` function on `req` or from the `headers` array.
+ *
+ * ```js
+ * var referer = utils.header(req, 'referer', '<undefined>');
+ * console.log(referer);
+ * //=> 'http://localhost'
+ * ```
+ * @param  {Object} `req` Request object from http or [express]
+ * @param  {String} `prop` Header property to get.
+ * @param  {String} `def` Default to return if the property is not found.
+ * @return {String} Specified header or default if the header is not found.
+ */
+
+utils.header = function(req, prop, def) {
+  if (typeof req.header === 'function') {
+    return req.header(prop) || def;
+  }
+  return req.headers[prop] || def;
 };
 
 /**
