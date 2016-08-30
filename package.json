@@ -19,10 +19,10 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "express": "^4.13.4",
-    "gulp-format-md": "^0.1.7",
-    "mocha": "*",
-    "supertest": "^1.2.0"
+    "express": "^4.14.0",
+    "gulp-format-md": "^0.1.10",
+    "mocha": "^3.0.2",
+    "supertest": "^2.0.0"
   },
   "keywords": [],
   "verb": {
@@ -40,7 +40,7 @@
     }
   },
   "dependencies": {
-    "lazy-cache": "^1.0.3",
+    "lazy-cache": "^2.0.1",
     "ua-parser-js": "^0.7.10"
   }
 }
