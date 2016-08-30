@@ -14,6 +14,22 @@ var utils = require('./utils');
  * Some of the adapted from https://github.com/joola/joola.io.express/blob/master/index.js#L39-L50
  *
  * ```js
+ * console.log(info(req));
+ * //=> {
+ * //=>   httpVersion: '1.1',
+ * //=>   ip: '127.0.0.1',
+ * //=>   method: 'GET',
+ * //=>   referer: 'http://localhost:8080/index.html',
+ * //=>   url: '/',
+ * //=>   ua: {
+ * //=>     ua: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
+ * //=>     browser: { name: 'Chrome', version: '52.0.2743.116', major: '52' },
+ * //=>     engine: { version: '537.36', name: 'WebKit' },
+ * //=>     os: { name: 'Mac OS', version: '10.9.5' },
+ * //=>     device: { model: undefined, vendor: undefined, type: undefined },
+ * //=>     cpu: { architecture: undefined }
+ * //=>   }
+ * //=> }
  * ```
  * @param  {Object} `req` http request object (from http or express)
  * @return {Object} info object containing `httpVersion`, `ip`, `method`, `referer`, `url`, and `ua` (useragent information)
