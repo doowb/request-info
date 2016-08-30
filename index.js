@@ -11,7 +11,6 @@ var utils = require('./utils');
 
 /**
  * Get information information about the given http request.
- * Some of the adapted from https://github.com/joola/joola.io.express/blob/master/index.js#L39-L50
  *
  * ```js
  * console.log(info(req));

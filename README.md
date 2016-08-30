@@ -18,9 +18,9 @@ var info = require('request-info');
 
 ## API
 
-### [info](index.js#L39)
+### [info](index.js#L38)
 
-Get information information about the given http request. Some of the adapted from https://github.com/joola/joola.io.express/blob/master/index.js#L39-L50
+Get information information about the given http request.
 
 **Params**
 
@@ -47,6 +47,10 @@ console.log(info(req));
 //=>   }
 //=> }
 ```
+
+## Acknowledgments
+
+Some of the code has been adapted from https://github.com/joola/joola.io.express/blob/master/index.js#L39-L50
 
 ## About
 
