@@ -18,11 +18,14 @@
   "scripts": {
     "test": "mocha"
   },
+  "dependencies": {
+    "ua-parser-js": "^0.7.10"
+  },
   "devDependencies": {
-    "express": "^4.14.0",
-    "gulp-format-md": "^0.1.10",
-    "mocha": "^3.0.2",
-    "supertest": "^2.0.0"
+    "express": "^4.17.1",
+    "gulp-format-md": "^2.0.0",
+    "mocha": "^9.0.2",
+    "supertest": "^6.1.3"
   },
   "keywords": [
     "address",
@@ -48,34 +51,29 @@
     "webtask",
     "webtaskio"
   ],
-  "dependencies": {
-    "lazy-cache": "^2.0.1",
-    "ua-parser-js": "^0.7.10"
-  },
   "verb": {
     "toc": false,
     "layout": "default",
     "tasks": [
       "readme"
     ],
+    "data": {
+      "author": {
+        "linkedin": "woodwardbrian"
+      }
+    },
     "plugins": [
       "gulp-format-md"
     ],
     "related": {
       "list": [
-        "express",
+        "gh-clone",
         "generate-webtask",
-        "gulp-bundle-webtask",
-        "http",
-        "webtask"
+        "gulp-bundle-webtask"
       ]
     },
     "lint": {
       "reflinks": true
-    },
-    "reflinks": [
-      "verb",
-      "verb-generate-readme"
-    ]
+    }
   }
 }
